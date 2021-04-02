@@ -37,7 +37,7 @@ html, body
 }
 .header > p:first-child
 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 200;
     line-height: 2.5rem;
     margin-bottom: 1rem;
@@ -146,7 +146,7 @@ html, body
 {
     .header
     {
-        width: calc(80% - 3rem);
+        width: calc(90% - 3.75rem);
         margin: 4rem 0
     }
     .card-container
