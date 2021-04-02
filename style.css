@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+    overflow-x: hidden;
+}
+
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    background: hsl(0, 0%, 98%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header
+{
+    max-width: 500px;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+.header > p:first-child
+{
+    font-size: 1.75rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+.header > p:last-child
+{
+    color: hsl(229, 6%, 66%);
+}
+
+.card-container
+{
+    width: calc(100% - 20rem);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col
+{
+    max-width: 100%;
+    width: calc(100% / 3);
+}
+.card-item
+{
+    width: 100%;
+    background: #fff;
+    max-height: 230px;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 2px 8px 15px 1px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    overflow: hidden;
+}
+.card-item:nth-of-type(2)
+{
+    margin-top: 2rem;
+}
+.card-item h5
+{
+    font-size: 1.25rem;
+}
+.card-item img
+{
+    align-self: flex-end;
+    width: calc(4vw + 1rem);
+    margin-top: 1rem;
+}
+.supervisor, .teamBuilder, .karma, .calculator
+{
+    position: relative;
+}
+.supervisor::after, .teamBuilder::after, .karma::after, .calculator::after
+{
+    content: "";
+    height: 4px;
+    width: calc(100% + 4rem);
+    transform: translate(-2rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(180, 62%, 55%);
+}
+.supervisor::after
+{
+    background-color: hsl(180, 62%, 55%);
+}
+.teamBuilder::after
+{
+    background-color: hsl(0, 78%, 62%);
+}
+.karma::after
+{
+    background-color: hsl(34, 97%, 64%);
+}
+.calculator::after
+{
+    background-color: hsl(212, 86%, 64%);
+}
+
+@media screen and (max-width: 1200px)
+{
+    html, body
+    {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    html, body
+    {
+        font-size: 12px;
+    }
+    .container
+    {
+        height: auto;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .header
+    {
+        width: calc(80% - 3rem);
+        margin: 4rem 0
+    }
+    .card-container
+    {
+        flex-direction: column;
+        width: calc(100% - 8rem);
+        margin-bottom: 6rem;
+    }
+    .col
+    {
+        width: 100%;
+    }
+    .card-item
+    {
+        max-height: 180px;
+    }
+    .card-item img
+    {
+        width: calc(4vw + 3rem);
+        margin-top: 0;
+    }
+}
